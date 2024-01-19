@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+{% extends "index.html" %}
+
+{% block content %}
+<a href ="{% url 'muestras:Programas-academicos' %}">CLICK </a>
+<ul>    
+    {% for escenario_deportivo in escenario_deportivos  %}
+        <li>{{escenario_deportivo.id}} / {{escenario_deportivo.name}} / {{escenario_deportivo.estado}} / {{escenario_deportivo.campus.name}} </li>
+    {% endfor %}    
+</ul>
+{% endblock  %}
