@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'SI_CRD.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "DEMO_SI_CRD",
+        "NAME": "demosicrd",
         "USER": "postgres",
         "PASSWORD": "$PFrank1192$",
         "HOST": "localhost",
