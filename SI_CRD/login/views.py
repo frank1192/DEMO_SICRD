@@ -7,7 +7,7 @@ def miprimeravista(request):
         'name' : 'Franklin',
         'programas_academicos' : programas_academicos.objects.all()
     }
-    return render(request,'index.html',data)
+    return render(request,'home.html',data)
 
 def misegundavista(request):
     data = {
