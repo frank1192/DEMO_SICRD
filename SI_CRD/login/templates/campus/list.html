@@ -1,0 +1,38 @@
+{% extends 'body.html' %}
+
+{% block content %}
+<div class="col-md-6">
+    <div class="card card-default">
+        <div class="card-header">
+            <h3 class="card-title">
+                <i class="fas fa-search"></i>
+                {{title}}
+            </h3>
+    </div>
+    
+    <div class="card-body">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">codigo</th>
+                <th scope="col">nombre</th>
+                <th scope="col">opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for c in campus  %}
+                <tr>
+                    <td>{{c.id}} </td>
+                    <td>{{c.name}} </td>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-xs"><i class="fas fa-edit"></i></button>
+                        <button type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button>
+                    </td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</div>
+{% endblock  %}

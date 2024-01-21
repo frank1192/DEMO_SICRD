@@ -2,12 +2,13 @@ from django.shortcuts import render
 from login.models import *
 # Create your views here.
 
-def miprimeravista(request):
+def campus_list(request):
     data = {
+        'title' : ' listado de campus',
         'name' : 'Franklin',
-        'programas_academicos' : programas_academicos.objects.all()
+        'campus' : campus.objects.all()
     }
-    return render(request,'home.html',data)
+    return render(request,'campus/list.html',data)
 
 def misegundavista(request):
     data = {
