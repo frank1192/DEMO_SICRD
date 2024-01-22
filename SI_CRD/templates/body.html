@@ -29,9 +29,15 @@
                 </div>
             </div>
         </div>
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+            {% include 'sidebar.html' %}
+        </aside>
         <!-- Footer -->
         {% include 'footer.html' %}
     </div>
-    <!-- ./wrapper -->
+    <!-- block javascript -->
+    {% block javascript %}
+    {% endblock  %}
     </body>
 {% endblock  %}
